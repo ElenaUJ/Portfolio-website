@@ -44,6 +44,7 @@ h2 {
     font-size: 20px;
     font-weight: var(--regular-font);
     line-height: 1.2;
+    padding-top: 10px;
 }
 a {
     color: var(--primary-color);
