@@ -22,6 +22,7 @@
     /* transitions */
     --transition-transform: 0.2s transform ease-in-out;
     --transform-scale: scale(1.125);
+    --transition-filter: 0.2s filter linear;
 }
 * {
     box-sizing: border-box;
@@ -237,6 +238,26 @@ button:focus {
 .social-media__icon {
     filter: invert(10%) sepia(28%) saturate(1717%) hue-rotate(193deg) brightness(101%) contrast(90%);
     text-decoration: none;
+}
+#github-icon,
+#twitter-icon,
+#linkedin-icon {
+    transition: var(--transition-transform), var(--transition-filter);
+}
+#github-icon:hover,
+#github-icon:focus {
+    scale: var(--transform-scale);
+    filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg) brightness(96%) contrast(90%);
+}
+#twitter-icon:hover,
+#twitter-icon:focus {
+    scale: var(--transform-scale);
+    filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg) brightness(100%) contrast(90%);
+}
+#linkedin-icon:hover,
+#linkedin-icon:focus {
+    scale: var(--transform-scale);
+    filter: invert(28%) sepia(51%) saturate(2451%) hue-rotate(193deg) brightness(97%) contrast(96%);
 }
 /* start animations */
     @keyframes color-change {
