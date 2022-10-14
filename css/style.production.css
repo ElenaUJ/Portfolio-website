@@ -33,6 +33,7 @@ h2 {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
+    padding-top: 10px;
 }
 a {
     color: #1C233F;
@@ -120,6 +121,7 @@ button:focus {
     background: linear-gradient(to bottom, rgba(26, 34, 62, 1), rgba(82, 101, 143, 1));
     border-bottom: 2px solid rgba(26, 34, 62, 0.3);
     color: #F1f1e6;
+    margin-bottom: 15px;
 }
 .button:active {
     color: #F1f1e6;
@@ -304,6 +306,57 @@ button:focus {
     -webkit-filter: invert(10%) sepia(28%) saturate(1717%) hue-rotate(193deg) brightness(101%) contrast(90%);
             filter: invert(10%) sepia(28%) saturate(1717%) hue-rotate(193deg) brightness(101%) contrast(90%);
     text-decoration: none;
+}
+#github-icon {
+    -webkit-transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    -o-transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear, 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+}
+#twitter-icon {
+    -webkit-transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    -o-transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear, 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+}
+#linkedin-icon {
+    -webkit-transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    transition: 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+    -o-transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear;
+    transition: 0.2s transform ease-in-out, 0.2s filter linear, 0.2s -webkit-transform ease-in-out, 0.2s -webkit-filter linear;
+}
+#github-icon:hover {
+    scale: scale(1.125);
+    -webkit-filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg) brightness(96%) contrast(90%);
+            filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg) brightness(96%) contrast(90%);
+}
+#github-icon:focus {
+    scale: scale(1.125);
+    -webkit-filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg) brightness(96%) contrast(90%);
+            filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg) brightness(96%) contrast(90%);
+}
+#twitter-icon:hover {
+    scale: scale(1.125);
+    -webkit-filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg) brightness(100%) contrast(90%);
+            filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg) brightness(100%) contrast(90%);
+}
+#twitter-icon:focus {
+    scale: scale(1.125);
+    -webkit-filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg) brightness(100%) contrast(90%);
+            filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg) brightness(100%) contrast(90%);
+}
+#linkedin-icon:hover {
+    scale: scale(1.125);
+    -webkit-filter: invert(28%) sepia(51%) saturate(2451%) hue-rotate(193deg) brightness(97%) contrast(96%);
+            filter: invert(28%) sepia(51%) saturate(2451%) hue-rotate(193deg) brightness(97%) contrast(96%);
+}
+#linkedin-icon:focus {
+    scale: scale(1.125);
+    -webkit-filter: invert(28%) sepia(51%) saturate(2451%) hue-rotate(193deg) brightness(97%) contrast(96%);
+            filter: invert(28%) sepia(51%) saturate(2451%) hue-rotate(193deg) brightness(97%) contrast(96%);
 }
 /* start animations */
     @-webkit-keyframes color-change {
