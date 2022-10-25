@@ -44,6 +44,15 @@ h2 {
     line-height: 1.2;
     padding-top: 10px;
 }
+table {
+    width: 100%;
+}
+td,
+th {
+    padding-right: 15px;
+    text-align: left;
+    vertical-align: top;
+}
 a {
     color: #1C233F;
     display: inline-block;
