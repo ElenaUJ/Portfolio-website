@@ -163,7 +163,7 @@ a:active {
     background: linear-gradient(to bottom, rgba(191, 147, 15, 1), rgba(239, 193, 57, 1));
     border-bottom: 2px solid rgba(191, 147, 15, 0.3);
     color: var(--primary-color);
-    margin-top: 8px;
+  margin-top: 16px;
 }
 .button-blue {
     background: linear-gradient(to bottom, rgba(26, 34, 62, 1), rgba(82, 101, 143, 1));
@@ -306,13 +306,6 @@ a:active {
 #contact-tel {
     margin-bottom: 20px;
 }
-.error-placeholder {
-    background: var(--background-color);
-    height: 16px;
-    margin-bottom: 4px;
-    /* This is not ideal to align error message under input field, I'm going to have to find a better way. It's label width + 3px */
-    position: relative;
-    left: 83px;
 }
 .error-message {
     background: var(--background-color);
