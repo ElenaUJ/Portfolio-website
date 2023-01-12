@@ -1,3 +1,17 @@
+// Implementing hamburger menu functionality
+(function () {
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+
+  function showMenu() {
+    const navigationList = document.querySelector('.navigation-list');
+
+    navigationList.classList.toggle('show-menu');
+    hamburgerIcon.classList.toggle('show-menu');
+  }
+  hamburgerIcon.addEventListener('click', showMenu);
+})();
+
+// Contact form validation
 (function () {
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#contact-email');

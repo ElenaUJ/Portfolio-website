@@ -118,6 +118,7 @@ a:active {
     background-color: var(--gray);
     margin: 0;
     min-height: auto;
+    min-width: 200px;
     width: auto;
   }
   .project-list__item:last-child {
@@ -204,9 +205,13 @@ a:active {
   display: inline-block;
   margin-left: 15px;
 }
-.navigation-list__item {
+.navigation-list__item,
+.navigation-list__item--active {
   margin: 0 5px;
   text-decoration: none;
+}
+.navigation-list__item--active {
+  color: var(--primary-color-light);
 }
 .navigation-list__item:visited {
   color: var(--primary-color);
@@ -215,7 +220,7 @@ a:active {
 .navigation-list__item:focus {
   transform: scale(1);
 }
-/* start underline navigation-link transition */
+/* start underline navigation-link upon hover */
 .navigation-list__item::before {
   /* creates a child pseudo element containing the underline */
   background-color: var(--primary-color);
@@ -225,20 +230,16 @@ a:active {
   height: 2px;
   position: absolute;
   /* absolute to parent container */
-  transition: 0.4s;
   width: 0%;
 }
 .navigation-list__item:hover::before,
 .navigation-list__item:focus::before {
   width: 100%;
 }
-/* end underline navigation-link transition */
-.navigation-list__item--active {
-  color: var(--primary-color-light);
-}
-.navigation-list__item--active:hover,
-.navigation-list__item--active:focus {
-  transform: none;
+/* end underline navigation-link upon hover */
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
 }
 .profile__portrait {
   border-radius: 50%;
@@ -363,27 +364,34 @@ a:active {
   h2 {
     font-size: 18px;
   }
-  .page-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .page-header__item {
-    flex-basis: auto;
-  }
   .page-header__item:last-child {
     margin: 0;
   }
   .page-header__logo {
-    display: inline-block;
+    display: block;
     padding: 0;
     width: 250px;
   }
   .navigation-list {
-    padding: 0;
+    display: none;
   }
-  .navigation-list li {
-    margin: 0;
+  .navigation-list.show-menu {
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+    position: absolute;
+    right: 0;
+  }
+  .navigation-list.show-menu li {
+    float: none;
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+  }
+  .hamburger-icon {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
   }
   .page-content {
     margin: 20px;
@@ -396,12 +404,17 @@ a:active {
   .profile__portrait {
     margin: 0;
   }
+  .intro-wrapper {
+    margin: 0 100px;
+  }
   .about-list {
     list-style-type: none;
     padding: 0;
   }
   .project-list {
     grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 0 100px;
   }
   .project-list__item:last-child {
     grid-column: auto / auto;
@@ -413,15 +426,5 @@ a:active {
   }
   .contact-page__info {
     padding: 0;
-  }
-}
-@media all and (max-width: 500px) {
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .project-list {
-    grid-template-columns: 1fr 1fr;
   }
 }

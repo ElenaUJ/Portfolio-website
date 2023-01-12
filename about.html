@@ -7,6 +7,8 @@
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap">
+        <!--Icon library for hamburger menu-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.production.css">
     </head>
     <body>
@@ -15,12 +17,16 @@
                 <img src="img/logo.png" alt="Elena Ulbricht-Jones's logo" class="page-header__logo">
             </a>
             <nav class="page-header__item">
+                <a class="hamburger-icon" aria-label="Open the menu">
+                    <!--The icon code from the icon library-->
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
                 <ul role="menubar" class="navigation-list">
                     <li role="presentation">
                         <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
                     </li>
                     <li role="presentation">
-                        <p role="menuitem" class="navigation-list__item navigation-list__item--active">About me</p>
+                        <p role="menuitem" class="navigation-list__item--active">About me</p>
                     </li>
                     <li role="presentation">
                         <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
@@ -32,15 +38,17 @@
             </nav>
         </header>
         <main class="page-content">
-            <h1>About me</h1>
-            <p>Hello! I am an aspiring web developer based in Toronto. But I also am...</p>
-            <ul class="about-list">
-                <li>a mom</li>
-                <li>a reliable friend</li>
-                <li>a globetrotter</li>
-                <li>a scientist</li>
-            </ul>
-            <a href="https://www.linkedin.com/in/ulbricht-jones/" target="_blank" class="button button-blue">Find out more!</a>            
+            <div class="intro-wrapper">
+                <h1>About me</h1>
+                <p>Hello! I am an aspiring web developer based in Toronto.But I also am...</p>
+                <ul class="about-list">
+                    <li>a mom</li>
+                    <li>a reliable friend</li>
+                    <li>a globetrotter</li>
+                    <li>a scientist</li>
+                </ul>
+                <a href="https://www.linkedin.com/in/ulbricht-jones/" target="_blank" class="button button-blue">Find out more!</a>
+            </div>            
             <p>I believe that the versatility of my experience is making me a well-rounded, organized, flexible, and <span>happy</span> person, eager to improve the (web) world. I am very excited about where my journey is going to take me.</p>
             <h2>My experience</h2>
             <table>
@@ -85,6 +93,6 @@
                 </a>
             </div>
         </footer>
-        <script src="js/tota11y.min.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
