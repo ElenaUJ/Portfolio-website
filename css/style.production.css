@@ -107,8 +107,17 @@ a:active {
 }
 /* start grid fallback, has to be placed before @supports rule */
 .project-list__item {
-  display: inline-block;
-  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 25px;
   width: 33%;
 }
 /* end grid fallback */
@@ -118,7 +127,7 @@ a:active {
     display: grid;
     grid-gap: 20px;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin: 0;
   }
   .project-list__item {
@@ -128,13 +137,40 @@ a:active {
     min-width: 200px;
     width: auto;
   }
-  .project-list__item:last-child {
-    -ms-grid-column: 3;
+  /* .project-list__item:last-child {
     grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
-  }
+  } */
+}
+.project-card-title {
+  margin: 0;
+  padding: 0;
+}
+.project-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.project-links {
+  margin-left: auto;
+}
+.project-list__item > p {
+  text-align: justify;
+}
+.mobile-images {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 15px;
+  -ms-grid-columns: 1fr 15px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.project-image {
+  margin-top: auto;
+  width: 100%;
+}
+#your-project {
+  background-color: #efc139;
+  height: 50%;
 }
 .contact-page {
   -webkit-box-align: center;
@@ -568,11 +604,16 @@ a:active {
     grid-gap: 10px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    margin: 0 100px;
+    margin: 0 10px;
   }
-  .project-list__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
+  .project-card-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .project-links {
+    margin: 0 auto;
   }
   .contact-page {
     -webkit-box-orient: vertical;
@@ -584,24 +625,4 @@ a:active {
   .contact-page__info {
     padding: 0;
   }
-}
-.example {
-  display: -ms-grid;
-  display: grid;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(white),
-    to(black)
-  );
-  background: -o-linear-gradient(top, white, black);
-  background: linear-gradient(to bottom, white, black);
 }
