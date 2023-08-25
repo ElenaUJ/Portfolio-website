@@ -1,89 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Elena's projects</title>
-        <link rel="icon" href="img/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap">
-        <!--Icon library for hamburger menu-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
-    </head>
-    <body>
-        <header class="page-header">
-            <a href="index.html" class="page-header__item">
-                <img src="img/logo.png" alt="Elena Ulbricht-Jones's logo" class="page-header__logo">
-            </a>
-            <nav class="page-header__item">
-                <a class="hamburger-icon" aria-label="Open the menu">
-                    <!--The icon code from the icon library-->
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </a>
-                <ul role="menubar" class="navigation-list">
-                    <li role="presentation">
-                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
-                    </li>
-                    <li role="presentation">
-                        <p role="menuitem" class="navigation-list__item--active">Work</p>
-                    </li>
-                    <li role="presentation">
-                        <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="page-content">
-            <h1>Work</h1>
-            <div class="project-list">
-                <div class="project-list__item">
-                    <h2>To-Do-List App</h2>
-                    <p>A basic HTML/CSS/JavaScript/jQuery app. The user can create, move, cross out, and remove list items.<br><br><br></p>
-                    <a href="https://github.com/ElenaUJ/To-Do-List-App">See project on Github</a>
-                </div>
-                <div class="project-list__item">
-                    <h2>Pokédex App</h2>
-                    <p>A small web application built with HTML, CSS and vanilla JavaScript. It loads data from an external API and enables the viewing of Pokémon details on demand. Further features include an item search and loading spinners.
-                    </p>
-                    <a href="https://github.com/ElenaUJ/pokedex-js-app">See project on Github</a>
-                </div>
-                <div class="project-list__item">
-                    <h2>Project 3</h2>
-                    <p>Row scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
-                    <a href="#">See project on Github</a>
-                </div>
-                <div class="project-list__item">
-                    <h2>Project 4</h2>
-                    <p>Row scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
-                    <a href="#">See project on Github</a>
-                </div>
-                <div class="project-list__item">
-                    <h2>Your project</h2>
-                    <p>Row scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl..</p>
-                    <a href="mailto:Elena.ulbjon@icloud.com?subject=I%20found%20your%20website">Contact me!</a>
-                    <!--The Contact Me! Doesn't behave like other links as in changing color when visited-->
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elena's projects</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    />
+    <!--Icon library for hamburger menu-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="index.html" class="page-header__item">
+        <img
+          src="img/logo.png"
+          alt="Elena Ulbricht-Jones's logo"
+          class="page-header__logo"
+        />
+      </a>
+      <nav class="page-header__item">
+        <a class="hamburger-icon" aria-label="Open the menu">
+          <!--The icon code from the icon library-->
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About me</a
+            >
+          </li>
+          <li role="presentation">
+            <p role="menuitem" class="navigation-list__item--active">Work</p>
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-content">
+      <h1>Work</h1>
+      <div class="project-list">
+        <div class="project-list__item">
+          <div class="project-card-header">
+            <h2 class="project-card-title">Pokédex</h2>
+            <div class="project-links">
+              <a href="https://elenauj.github.io/pokedex-js-app/">Demo</a>
+              <a href="https://github.com/ElenaUJ/pokedex-js-app">Code</a>
             </div>
-        </main>
-        <footer class="page-footer">
-            <p>Find me on</p>
-            <!--Hyperlink has to be inserted for Twitter profile-->
-            <div class="social-media">
-                <a href="https://github.com/ElenaUJ" target="_blank" class="social-media__icon" id="github-icon">
-                    <img src="img/social-github.svg" alt="Github logo">
-                </a>
-                <a href="#" target="_blank" class="social-media__icon" id="twitter-icon">
-                    <img src="img/social-twitter.svg" alt="Twitter logo">
-                </a>
-                <a href="https://www.linkedin.com/in/ulbricht-jones/" target="_blank" class="social-media__icon" id="linkedin-icon">
-                    <img src="img/social-linkedin.svg" alt="LinkedIn logo">
-                </a>
+          </div>
+          <p>
+            A small web application built with HTML, CSS and vanilla JavaScript.
+            It loads data from an external API and enables the viewing of
+            Pokémon details on demand. Further features include a Pokémon search
+            and loading spinners.
+            <br /><br />
+            <b>Technologies used: </b>HTML, CSS, vanilla JavaScript, Bootstrap
+          </p>
+          <img
+            src="img/pokedex_screenshot.jpg"
+            alt="Screenshot of Pokédex app"
+            class="project-image"
+          />
+        </div>
+        <div class="project-list__item">
+          <div class="project-card-header">
+            <h2 class="project-card-title">MovieMate (MERN-stack)</h2>
+            <div class="project-links">
+              <a href="https://my-moviemate.netlify.app">Demo</a>
+              <a href="https://github.com/ElenaUJ/MovieMate-client">Code</a>
+              <a href="https://github.com/ElenaUJ/MyFlix-movie-app">Backend</a>
             </div>
-        </footer>
-        <script src="js/scripts.js"></script>
-    </body>
+          </div>
+          <p>
+            A full-stack responsive movie app that combines a user-friendly
+            client interface with a robust server-side REST API and MongoDB
+            database. Users can easily register, access movie details, update
+            their information, and manage their favorite movies. <br /><br />
+            <b>Technologies used: </b>MongoDB, Express, React, Node.js
+          </p>
+          <img
+            src="img/moviemate_react_screenshot.jpg"
+            alt="Screenshot of MovieMate React App"
+            class="project-image"
+          />
+        </div>
+        <div class="project-list__item">
+          <div class="project-card-header">
+            <h2 class="project-card-title">MovieMate (MEAN-stack)</h2>
+            <div class="project-links">
+              <a href="https://elenauj.github.io/MovieMate-Angular/welcome"
+                >Demo</a
+              >
+              <a href="https://github.com/ElenaUJ/MovieMate-Angular">Code</a>
+            </div>
+          </div>
+          <p>
+            A rebuilt of the MovieMate app integrating the Angular framework in
+            order to explore and complete the MEAN-stack architecture.
+            <br /><br />
+            <b>Technologies used: </b>MongoDB, Express, Angular, Node.js,
+            TypeScript
+          </p>
+          <img
+            src="img/moviemate_angular_screenshot.jpg"
+            alt="Screenshot of MovieMate Angular App"
+            class="project-image"
+          />
+        </div>
+        <div class="project-list__item">
+          <div class="project-card-header">
+            <h2 class="project-card-title">EventScout</h2>
+            <div class="project-links">
+              <a href="https://elenauj.github.io/EventScout/">Demo</a>
+              <a href="https://github.com/ElenaUJ/EventScout">Code</a>
+            </div>
+          </div>
+          <p>
+            A serverless progressive web app (PWA) that simplifies researching
+            and scheduling local web development events. Developed using
+            test-driven and behavior-driven techniques, using the Google
+            Calendar API for upcoming events and a serverless AWS Lambda backend
+            for secure access. <br /><br />
+            <b>Technologies used: </b>React, AWS Lambda, TDD/BDD (Enzyme, Jest,
+            Cucumber, Puppeteer), Recharts, PWA, Atatus.
+          </p>
+          <img
+            src="img/eventscout_screenshot.jpg"
+            alt="Screenshot of EventScout app"
+            class="project-image"
+          />
+        </div>
+        <div class="project-list__item">
+          <div class="project-card-header">
+            <h2 class="project-card-title">Chatterbox (mobile app)</h2>
+            <div class="project-links">
+              <a href="https://github.com/ElenaUJ/chatterbox" class="demo-link"
+                >Code</a
+              >
+            </div>
+          </div>
+          <p>
+            Mobile chat app built using React Native, Expo, and Google Firestore
+            Cloud for cross-platform native development. Real-time chat
+            functionality with WebSocket protocol is supported, while messages
+            are stored locally. The app also enables image and location sharing.
+            <br /><br />
+            <b>Technologies used: </b>React Native, Google Firestore, Expo
+          </p>
+          <div class="mobile-images">
+            <img
+              src="img/chatterbox_login_screenshot.jpg"
+              alt="Screenshot of app's login interface"
+              class="project-image"
+            /><img
+              src="img/chatterbox_chat_screenshot.jpg"
+              alt="Screenshot of app's chat interface"
+              class="project-image"
+            />
+          </div>
+        </div>
+        <div class="project-list__item" id="your-project">
+          <h2 class="project-card-title">Your project</h2>
+          <p>
+            Whether you have a project ready to take off or an idea to explore,
+            please feel free to reach out and share your thoughts. Let's connect
+            to discuss your goals and transform them into reality!
+          </p>
+          <a
+            href="mailto:Elena.ulbjon@icloud.com?subject=I%20found%20your%20website"
+            >Contact me!</a
+          >
+          <!--The Contact Me! Doesn't behave like other links as in changing color when visited-->
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <p>Find me on</p>
+      <!--Hyperlink has to be inserted for Twitter profile-->
+      <div class="social-media">
+        <a
+          href="https://github.com/ElenaUJ"
+          target="_blank"
+          class="social-media__icon"
+          id="github-icon"
+        >
+          <img src="img/social-github.svg" alt="Github logo" />
+        </a>
+        <a
+          href="#"
+          target="_blank"
+          class="social-media__icon"
+          id="twitter-icon"
+        >
+          <img src="img/social-twitter.svg" alt="Twitter logo" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ulbricht-jones/"
+          target="_blank"
+          class="social-media__icon"
+          id="linkedin-icon"
+        >
+          <img src="img/social-linkedin.svg" alt="LinkedIn logo" />
+        </a>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
