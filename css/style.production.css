@@ -348,6 +348,97 @@ a:active {
   vertical-align: middle;
   width: 250px;
 }
+.skill-bar-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  background: #e8e8e8;
+  padding: 15px 20px 35px 20px;
+  border-radius: 7px;
+}
+.skill-bar-container .skill-box {
+  width: 100%;
+}
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c233f;
+  text-align: left;
+}
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin: 6px 0 9px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+  width: 100%;
+  /* animation: progress 0.4s ease-in-out forwards; */
+}
+.skill-per.html-css {
+  width: 60%;
+  background: #1c233f;
+}
+.skill-per.javascript {
+  width: 70%;
+  background: #52658f;
+  /* animation-delay: 0.1s; */
+}
+.skill-per.mern {
+  width: 60%;
+  background: #efc139;
+  /* animation-delay: 0.2s; */
+}
+.skill-per.cloud-computing {
+  width: 20%;
+  background: #598aff;
+  /* animation-delay: 0.3s; */
+}
+/* @keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #f1f1e6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #52658f;
+  z-index: 1;
+}
+.skill-per .tooltip.cloud-computing {
+  top: 18px;
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background: #52658f;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+.tooltip.cloud-computing::before {
+  top: -2px;
+}
 .contact-page__graphic {
   float: left;
   vertical-align: middle;
@@ -599,6 +690,9 @@ a:active {
   .about-list {
     list-style-type: none;
     padding: 0;
+  }
+  .skill-bar-container {
+    margin: 0 auto;
   }
   .project-list {
     grid-gap: 10px;
