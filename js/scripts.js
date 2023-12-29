@@ -1,9 +1,9 @@
 // Implementing hamburger menu functionality
 (function () {
-  const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const hamburgerIcon = document.querySelector('.hamburger-menu');
 
   function showMenu() {
-    const navigationList = document.querySelector('.navigation-list');
+    const navigationList = document.querySelector('.menu');
 
     navigationList.classList.toggle('show-menu');
     hamburgerIcon.classList.toggle('show-menu');
