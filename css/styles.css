@@ -227,8 +227,7 @@ th {
   color: var(--background-color);
   margin-bottom: 1rem;
 }
-.hamburger-menu,
-.hamburger-home {
+.hamburger-menu {
   display: none;
 }
 .logo {
@@ -509,9 +508,6 @@ th {
     top: 0;
     transform: translateY(-130%);
     transition: transform var(--x-timing);
-  }
-  .hamburger-home {
-    display: block;
   }
   .menu-item {
     border-bottom: 1px solid var(--background-color);
