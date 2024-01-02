@@ -48,18 +48,19 @@
 -----------------------------------------------------------*/
 a {
   color: var(--primary-color);
+  display: inline-block;
   transition: var(--transition-transform);
 }
-a:visited {
+a:not(header a):visited {
   color: var(--primary-color-light);
   scale: 1;
 }
-a:hover,
-a:focus {
+a:not(header a):hover,
+a:not(header a):focus {
   text-decoration: none;
   transform: var(--transform-scale);
 }
-a:active {
+a:not(header a):active {
   color: var(--link-active);
 }
 body {
@@ -89,13 +90,6 @@ header {
 }
 header a {
   text-decoration: none;
-}
-header a:hover,
-header a:focus {
-  transform: scale(1);
-}
-header a:visited {
-  color: var(--primary-color);
 }
 table {
   width: 100%;
@@ -242,18 +236,22 @@ th {
 .menu-item {
   margin-left: 2rem;
 }
-.hamburger-menu:has(input:not(:checked)) + .menu-item a::before {
+.menu-item a {
+  position: relative;
+}
+.menu-item a::before {
   background-color: var(--primary-color);
   bottom: 1px;
   content: '';
   height: 2px;
   position: absolute;
+  width: 0;
 }
 .menu-item a:hover::before,
 .menu-item a:focus::before {
   width: 100%;
 }
-.hamburger-menu:has(input:not(:checked)) + .menu-item.active a {
+.menu-item.active a {
   color: var(--primary-color-light);
 }
 .menu-item.active a:before {
@@ -520,8 +518,12 @@ th {
     border-bottom: none;
   }
   .menu-item a,
-  .menu-item a:visited {
+  .menu-item a:visited,
+  .menu-item.active a {
     color: var(--background-color);
+  }
+  .menu-item a:hover::before {
+    width: 0;
   }
   /* end hamburger menu styling */
   .logo {
