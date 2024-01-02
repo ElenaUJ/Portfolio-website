@@ -48,7 +48,6 @@
 -----------------------------------------------------------*/
 a {
   color: var(--primary-color);
-  display: inline-block;
   transition: var(--transition-transform);
 }
 a:visited {
@@ -243,7 +242,7 @@ th {
 .menu-item {
   margin-left: 2rem;
 }
-.menu-item a::before {
+.hamburger-menu:has(input:not(:checked)) + .menu-item a::before {
   background-color: var(--primary-color);
   bottom: 1px;
   content: '';
@@ -254,7 +253,7 @@ th {
 .menu-item a:focus::before {
   width: 100%;
 }
-.menu-item.active a {
+.hamburger-menu:has(input:not(:checked)) + .menu-item.active a {
   color: var(--primary-color-light);
 }
 .menu-item.active a:before {
@@ -508,6 +507,7 @@ th {
     top: 0;
     transform: translateY(-130%);
     transition: transform var(--x-timing);
+    width: 100%;
   }
   .menu-item {
     border-bottom: 1px solid var(--background-color);
@@ -519,7 +519,8 @@ th {
   .menu-item:last-child {
     border-bottom: none;
   }
-  .menu-item a {
+  .menu-item a,
+  .menu-item a:visited {
     color: var(--background-color);
   }
   /* end hamburger menu styling */
