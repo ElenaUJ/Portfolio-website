@@ -2,11 +2,11 @@
 -----------------------------------------------------------*/
 :root {
   /* colors */
-  --background-color: #f1f1e6;
-  --primary-color: #1c233f;
-  --primary-color-light: #52658f;
-  --accent-color-1: #598aff;
-  --accent-color-2: #efc139;
+  --background-color: #fff5e1;
+  --primary-color: #333333;
+  --primary-color-light: #666666;
+  --accent-color-1: #6e5773;
+  --accent-color-2: #8a9a5b;
   --link-active: #a34024;
   --gray: #e8e8e8;
   --orange: #fc9c54;
