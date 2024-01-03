@@ -1,16 +1,3 @@
-// Implementing hamburger menu functionality
-(function () {
-  const hamburgerIcon = document.querySelector('.hamburger-menu');
-
-  function showMenu() {
-    const navigationList = document.querySelector('.menu');
-
-    navigationList.classList.toggle('show-menu');
-    hamburgerIcon.classList.toggle('show-menu');
-  }
-  hamburgerIcon.addEventListener('click', showMenu);
-})();
-
 // // Contact form validation
 // (function () {
 //   let form = document.querySelector('#contact-form');
