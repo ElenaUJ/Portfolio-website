@@ -3,8 +3,8 @@
 :root {
   /* colors */
   --background-color: #fff5e1;
-  --primary-color: #333333;
-  --primary-color-light: #666666;
+  --primary-color: #4c3852;
+  --primary-color-light: #6e5773;
   --accent-color-1: #6e5773;
   --accent-color-2: #8a9a5b;
   --link-active: #a34024;
@@ -17,7 +17,6 @@
   --bold-font: 700;
   --regular-font: 400;
   /* box-styles */
-  --margin-all: 2.5rem;
   --margin-center: 2.5rem auto;
   --no-margin-center: 0 auto;
   --max-width-content: 40rem;
@@ -66,11 +65,15 @@ a:not(header a):active {
 body {
   background-color: var(--background-color);
   color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
   font-family: var(--body-font);
+  font-weight: var(--regular-font);
+  justify-content: space-between;
   line-height: 1.6;
   margin: 0;
-  font-size: 18px;
-  font-weight: var(--regular-font);
+  min-height: 100vh;
 }
 h1 {
   font-family: var(--heading-font);
@@ -104,13 +107,37 @@ th {
 /* Object style (design patterns, such as layouts)
 -----------------------------------------------------------*/
 .page-content {
-  margin: var(--margin-all);
+  margin: 2.5rem;
 }
-.profile {
+.landing-page {
   align-items: center;
   display: flex;
-  max-width: var(--max-width-content);
-  margin: var(--margin-center);
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 1rem;
+}
+.title {
+  font-size: 7vw;
+  font-weight: bold;
+  animation: 1.2s slideIn ease-out;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 /* start grid fallback, has to be placed before @supports rule */
 .project-list__item {
@@ -176,6 +203,7 @@ th {
   clear: both;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
@@ -257,13 +285,13 @@ th {
 .menu-item.active a:before {
   background-color: var(--primary-color-light);
 }
-.profile__portrait {
+/* .profile__portrait {
   border-radius: 50%;
   float: left;
   margin-right: 2rem;
   vertical-align: middle;
   width: 18rem;
-}
+} */
 .skill-bar-container {
   position: relative;
   max-width: 33rem;
@@ -533,14 +561,10 @@ th {
     margin: 1rem;
     text-align: center;
   }
-  .profile {
-    flex-direction: column;
-    margin: 1rem;
-  }
   .profile__portrait {
     margin: 0;
   }
-  .intro-wrapper {
+  */ .intro-wrapper {
     margin: 0 100px;
   }
   .about-list {
