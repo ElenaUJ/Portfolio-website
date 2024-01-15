@@ -1,3 +1,33 @@
+// Random info generator (no repeats)
+const generateRandomInfo = (currentInfoText) => {
+  const randomInfoList = [
+    'I have lived on three different continents.',
+    'I manage our fridge and plan meals to avoid food waste.',
+    'I am the oldest of four siblings.',
+    'I love living room dance parties with my kids.',
+    'I speak three languages: German, English, and Spanish.',
+    'One of my biggest weaknesses is coffee.',
+    'I am an early bird.',
+    'My next project is a decision-maker helper.',
+    'My favourite season is fall.',
+  ];
+  let randomInfoText = currentInfoText;
+
+  while (randomInfoText === currentInfoText) {
+    const randomInfoIndex = Math.floor(Math.random() * randomInfoList.length);
+    randomInfoText = randomInfoList[randomInfoIndex];
+  }
+
+  return randomInfoText;
+};
+
+const updateRandomInfo = () => {
+  const currentInfoText = document.getElementById('randomInfo').innerText;
+  const newInfoText = generateRandomInfo(currentInfoText);
+
+  document.getElementById('randomInfo').innerText = newInfoText;
+};
+
 // // Contact form validation
 // (function () {
 //   let form = document.querySelector('#contact-form');

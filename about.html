@@ -7,13 +7,12 @@
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
       rel="stylesheet"
     />
-    <!--Icon library for hamburger menu-->
     <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@400&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
@@ -42,90 +41,67 @@
         </ul>
       </nav>
     </header>
-    <main class="page-content">
-      <div class="intro-wrapper">
-        <h1>About Me</h1>
-        <p>I am a web developer based in Toronto. But I also am...</p>
-        <ul class="about-list">
-          <li>a mom</li>
-          <li>a scientist</li>
-          <li>a reliable friend</li>
-          <li>a globetrotter</li>
-        </ul>
-        <a
-          href="https://www.linkedin.com/in/ulbricht-jones/"
-          target="_blank"
-          class="button button-blue"
-          >Find out more!</a
-        >
-      </div>
-      <p>
-        I believe that the versatility of my experience is making me a
-        well-rounded, organized, flexible, and happy person, eager to improve
-        the (web) world. I am very excited about where my journey is going to
-        take me.
-      </p>
-      <h2>Full Stack Web Development Skills</h2>
-      <div class="skill-bar-container">
-        <div class="skill-box">
-          <span class="title">HTML/CSS</span>
-          <div class="skill-bar">
-            <span class="skill-per html-css">
-              <span class="tooltip">60%</span>
-            </span>
+    <main>
+      <h1>About Me</h1>
+      <div class="about-wrapper">
+        <div class="portrait-wrapper">
+          <!--Profile pic has to be replaced with a more professional one-->
+          <img
+            src="img/CartoonElena.jpg"
+            alt="A photograph of Elena holding cup"
+          />
+          <div class="bubble">
+            <p id="randomInfo">
+              Curious? Dive into random facts about me. Click below!
+            </p>
           </div>
-          <span class="title">JavaScript</span>
-          <div class="skill-bar">
-            <span class="skill-per javascript">
-              <span class="tooltip">70%</span>
-            </span>
-          </div>
-          <span class="title">MERN-stack</span>
-          <div class="skill-bar">
-            <span class="skill-per mern">
-              <span class="tooltip">60%</span>
-            </span>
-          </div>
-          <span class="title">Cloud Computing</span>
-          <div class="skill-bar">
-            <span class="skill-per cloud-computing">
-              <span class="tooltip cloud-computing">20%</span>
-            </span>
-          </div>
+          <button class="secrets-button" onClick="updateRandomInfo()">
+            <span>Unveil a secret</span>
+          </button>
+        </div>
+        <div class="summary-wrapper">
+          <p>
+            Hi there! I'm Elena, a former biologist who found her true passion
+            in web development.
+          </p>
+          <p>
+            In my previous life as a scientist, I confidently navigated through
+            the challenges of molecular biology, bioinformatics, and data
+            analysis. This experience sharpened my analytical and critical
+            thinking skills, and helped me grow both personally and
+            professionally. However, my journey took an exciting turn when I
+            fell in love with coding...
+          </p>
+          <p>
+            My unique blend of strengths—organization, systematic thinking, and
+            love for problem-solving—provides me with a strong foundation to be
+            an efficient and fast-learning developer. Now, armed with a growing
+            tech skillset including HTML, CSS, and the MERN stack amongst
+            others, I'm on a mission to put those skills to a meaningful use.
+          </p>
+          <p>
+            I'm on the lookout for exciting opportunities to contribute
+            innovative solutions to impactful, and sustainable, projects in
+            Toronto (CA), and all over the world.
+          </p>
+          Ready to collaborate? Let's connect on
+          <a href="https://www.linkedin.com/in/ulbricht-jones/" target="_blank">
+            LinkedIn
+          </a>
+          or feel free to
+          <a
+            href="mailto:Elena.ulbjon@icloud.com?subject=I%20found%20your%20website"
+          >
+            reach out via email </a
+          >.
+          <!-- <a
+              class="button button-blue"
+              href="https://drive.google.com/file/d/1NspKP1vfeXIMztxURsP2jY7xfxBypW6P/view?usp=sharing"
+              download="Resume_ElenaUJ.pdf"
+              >Download resume!</a
+            > -->
         </div>
       </div>
-      <h2>Previous Experience</h2>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Years</th>
-            <th>Skills</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Biology studies</td>
-            <td>6</td>
-            <td>Focus, Determination, Time management</td>
-          </tr>
-          <tr>
-            <td>Research</td>
-            <td>4</td>
-            <td>
-              Project management, Problem solving, Presentation, Communication,
-              Team work
-            </td>
-          </tr>
-          <tr>
-            <td>Parenting</td>
-            <td>6</td>
-            <td>
-              Flexibility, Multi-tasking, Stress management, Conflict management
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </main>
     <footer class="page-footer">
       <p>Find me on</p>
