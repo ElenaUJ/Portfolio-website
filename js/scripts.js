@@ -1,94 +1,111 @@
-// Implementing hamburger menu functionality
-(function () {
-  const hamburgerIcon = document.querySelector('.hamburger-icon');
+// Random info generator (no repeats)
+const generateRandomInfo = (currentInfoText) => {
+  const randomInfoList = [
+    'I have lived on three different continents.',
+    'I manage our fridge and plan meals to avoid food waste.',
+    'I am the oldest of four siblings.',
+    'I love living room dance parties with my kids.',
+    'I speak three languages: German, English, and Spanish.',
+    'One of my biggest weaknesses is coffee.',
+    'I am an early bird.',
+    'My next project is a decision-maker helper.',
+    'My favourite season is fall.',
+  ];
+  let randomInfoText = currentInfoText;
 
-  function showMenu() {
-    const navigationList = document.querySelector('.navigation-list');
-
-    navigationList.classList.toggle('show-menu');
-    hamburgerIcon.classList.toggle('show-menu');
-  }
-  hamburgerIcon.addEventListener('click', showMenu);
-})();
-
-// Contact form validation
-(function () {
-  let form = document.querySelector('#contact-form');
-  let emailInput = document.querySelector('#contact-email');
-  let messageInput = document.querySelector('#contact-message');
-  let emailError = document.querySelector('.email-error');
-  let messageError = document.querySelector('.message-error');
-
-  function showErrorMessage(error, message) {
-    // Check and remove existing errors
-    if (error) {
-      error.innerText = '';
-    }
-
-    // Add error message as long as it isn't empty (meaning there would be no need for error message)
-    if (message) {
-      error.innerText = message;
-    }
+  while (randomInfoText === currentInfoText) {
+    const randomInfoIndex = Math.floor(Math.random() * randomInfoList.length);
+    randomInfoText = randomInfoList[randomInfoIndex];
   }
 
-  function validateEmail() {
-    let value = emailInput.value;
+  return randomInfoText;
+};
 
-    if (!value) {
-      showErrorMessage(emailError, 'E-mail is a required field.');
-      return false;
-    }
+const updateRandomInfo = () => {
+  const currentInfoText = document.getElementById('randomInfo').innerText;
+  const newInfoText = generateRandomInfo(currentInfoText);
 
-    if (value.indexOf('@') === -1) {
-      showErrorMessage(emailError, 'Please enter a valid e-mail adress.');
-      return false;
-    }
+  document.getElementById('randomInfo').innerText = newInfoText;
+};
 
-    if (value.indexOf('.') === -1) {
-      showErrorMessage(emailError, 'Please enter a valid e-mail adress.');
-      return false;
-    }
+// // Contact form validation
+// (function () {
+//   let form = document.querySelector('#contact-form');
+//   let emailInput = document.querySelector('#contact-email');
+//   let messageInput = document.querySelector('#contact-message');
+//   let emailError = document.querySelector('.email-error');
+//   let messageError = document.querySelector('.message-error');
 
-    showErrorMessage(emailError, null);
-    return true;
-  }
+//   function showErrorMessage(error, message) {
+//     // Check and remove existing errors
+//     if (error) {
+//       error.innerText = '';
+//     }
 
-  function validateMessage() {
-    let value = messageInput.value;
+//     // Add error message as long as it isn't empty (meaning there would be no need for error message)
+//     if (message) {
+//       error.innerText = message;
+//     }
+//   }
 
-    if (!value) {
-      showErrorMessage(
-        messageError,
-        'Please enter a message before submitting.'
-      );
-      return false;
-    }
+//   function validateEmail() {
+//     let value = emailInput.value;
 
-    showErrorMessage(messageError, null);
-    return true;
-  }
+//     if (!value) {
+//       showErrorMessage(emailError, 'E-mail is a required field.');
+//       return false;
+//     }
 
-  // Variables have to be generated for each validation so they don't depend on each other; both validation functions have to be called in either case. If only && is used, validateMessage() won't be called if validateEmail() returns false
-  function validateForm() {
-    let isValidEmail = validateEmail();
-    let isValidMessage = validateMessage();
-    return isValidEmail && isValidMessage;
-  }
+//     if (value.indexOf('@') === -1) {
+//       showErrorMessage(emailError, 'Please enter a valid e-mail adress.');
+//       return false;
+//     }
 
-  form.addEventListener('submit', function (event) {
-    // Don't submit to server yet.
-    event.preventDefault();
+//     if (value.indexOf('.') === -1) {
+//       showErrorMessage(emailError, 'Please enter a valid e-mail adress.');
+//       return false;
+//     }
 
-    // Is this the proper spot to call this function???
-    validateMessage();
+//     showErrorMessage(emailError, null);
+//     return true;
+//   }
 
-    if (validateForm()) {
-      alert(
-        'Delivering forms is not implemented yet. Please use provided e-mail address :)'
-      );
-    }
-  });
+//   function validateMessage() {
+//     let value = messageInput.value;
 
-  emailInput.addEventListener('input', validateEmail);
-  messageInput.addEventListener('input', validateMessage);
-})();
+//     if (!value) {
+//       showErrorMessage(
+//         messageError,
+//         'Please enter a message before submitting.'
+//       );
+//       return false;
+//     }
+
+//     showErrorMessage(messageError, null);
+//     return true;
+//   }
+
+//   // Variables have to be generated for each validation so they don't depend on each other; both validation functions have to be called in either case. If only && is used, validateMessage() won't be called if validateEmail() returns false
+//   function validateForm() {
+//     let isValidEmail = validateEmail();
+//     let isValidMessage = validateMessage();
+//     return isValidEmail && isValidMessage;
+//   }
+
+//   form.addEventListener('submit', function (event) {
+//     // Don't submit to server yet.
+//     event.preventDefault();
+
+//     // Is this the proper spot to call this function???
+//     validateMessage();
+
+//     if (validateForm()) {
+//       alert(
+//         'Delivering forms is not implemented yet. Please use provided e-mail address :)'
+//       );
+//     }
+//   });
+
+//   emailInput.addEventListener('input', validateEmail);
+//   messageInput.addEventListener('input', validateMessage);
+// })();
