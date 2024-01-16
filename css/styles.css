@@ -40,6 +40,7 @@
 -----------------------------------------------------------*/
 a {
   color: var(--text-color);
+  display: inline-block;
 }
 body {
   background-color: var(--background-color);
@@ -335,55 +336,9 @@ main p {
 .menu-item.active a:before {
   background-color: var(--primary-color-light);
 }
-.contact-page__graphic {
-  float: left;
-  vertical-align: middle;
-  width: 17rem;
-}
-/* start animations */
-@keyframes color-change {
-  0% {
-    fill: var(--accent-color-2);
-  }
-  25% {
-    fill: var(--orange);
-  }
-  50% {
-    fill: var(--red);
-  }
-  75% {
-    fill: var(--primary-color-light);
-  }
-  100% {
-    fill: var(--primary-color);
-  }
-}
-.circle {
-  animation: 6s color-change infinite alternate ease-in-out;
-}
-@keyframes rotate {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-#steam {
-  animation: 6s rotate infinite alternate linear;
-  transform-box: fill-box;
-  transform-origin: center;
-}
-/* end animations */
 .contact-page__info {
   padding-left: 1.5rem;
 }
-.credits {
-  font-size: 12px;
-  margin-top: 0;
-  text-align: center;
-}
-/* Selects all <p> children of #contact-form */
 #contact-form > p {
   margin: 0;
 }
