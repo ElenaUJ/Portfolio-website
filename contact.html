@@ -39,7 +39,44 @@
     </header>
     <main>
       <h1>Get in Touch!</h1>
-      <div class="contact-page">
+      <div class="contact-form-wrapper">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="9c94b482-812f-430d-b10c-79abfa3c6c25"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="input"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            class="input"
+            required
+          ></textarea>
+          <button type="submit" class="button button-blue">
+            Send Message!
+          </button>
+        </form>
+      </div>
+
+      <!-- <div class="contact-page">
         <div class="contact-page__info">
           <p>
             <a
@@ -50,28 +87,8 @@
           <p>
             <a href="https://www.linkedin.com/in/ulbricht-jones/">LinkedIn</a>
           </p>
-          <!-- <p><a href="tel:+16476368549">+1 (647) 636-8549</a></p> -->
-          <p><a href="skype:schnascher">Skype</a></p>
-          <!-- <h2>Contact form</h2>
-                    <form action="#" method="post" id="contact-form"> -->
-          <!-- <p>
-                            <label class="standard-label" for="contact-email">E-mail: </label>
-                            <input class="input-box" type="email" id="contact-email">
-                            <div class="error-message email-error"></div>
-                        </p>
-                        <p>
-                            <label class="standard-label" for="contact-tel">Telephone: </label>
-                            <input class="input-box" type="tel" id="contact-tel">
-                        </p>
-                        <p>
-                            <label class="standard-label" for="contact-message">Message: </label>
-                            <textarea class="input-box" maxlength="240" id="contact-message"></textarea>
-                            <div class="error-message message-error"></div>
-                        </p>
-                        <button class="button button-yellow">Send message</button>
-                    </form> -->
         </div>
-      </div>
+      </div> -->
     </main>
     <footer class="page-footer">
       <p>Find me on</p>
@@ -104,5 +121,6 @@
       </div>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
