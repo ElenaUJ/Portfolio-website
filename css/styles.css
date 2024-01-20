@@ -70,6 +70,9 @@ h1 {
   margin: 2rem;
   text-align: center;
 }
+h2 {
+  font-size: 1.2rem;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -200,31 +203,21 @@ main p {
 .project-list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   margin: 0;
 }
-.project-list__item {
+.project-card {
   background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  min-height: auto;
-  min-width: 11rem;
-  width: auto;
+  padding: 0.5rem;
 }
-/* .project-list__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
-  } */
 .project-card-title {
   margin: 0;
   padding: 0;
 }
-.project-card-header {
-  display: flex;
-}
-.project-links {
-  margin-left: auto;
-}
-.project-list__item > p {
+.project-card p {
   text-align: justify;
 }
 .mobile-images {
@@ -277,44 +270,32 @@ main p {
 
 /* Component style
 -----------------------------------------------------------*/
-.button {
-  border: none;
-  border-radius: 0.15rem;
-  display: inline-block;
-  font-family: var(--body-font);
-  line-height: 1;
-  padding: 0.25rem 0.5rem;
-  text-decoration: none;
-  transition: var(--transition-transform);
-}
-.button:hover,
-.button:focus {
-  cursor: pointer;
-  transform: var(--transform-scale);
-}
-.button-blue:active,
-.button-blue:visited {
-  color: var(--background-color);
-}
-.button-yellow {
-  background: linear-gradient(
-    to bottom,
-    rgba(191, 147, 15, 1),
-    rgba(239, 193, 57, 1)
-  );
-  border-bottom: 0.1rem solid rgba(191, 147, 15, 0.3);
-  color: var(--primary-color);
-  margin-top: 1rem;
-}
-.button-blue {
+.submit-button {
   background: linear-gradient(
     to bottom,
     rgba(26, 34, 62, 1),
     rgba(82, 101, 143, 1)
   );
+  border: none;
   border-bottom: 0.1rem solid rgba(26, 34, 62, 0.3);
+  border-radius: 0.15rem;
   color: var(--background-color);
+  display: inline-block;
+  font-family: var(--body-font);
+  line-height: 1;
   margin-bottom: 1rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  transition: var(--transition-transform);
+}
+.submit-button:hover,
+.submit-button:focus {
+  cursor: pointer;
+  transform: var(--transform-scale);
+}
+.submit-button:active,
+.submit-button:visited {
+  color: var(--background-color);
 }
 .hamburger-menu,
 .home {
@@ -401,6 +382,15 @@ main p {
 @media all and (min-width: 751px) and (max-width: 833px) {
   .bubble {
     height: 8rem;
+  }
+}
+@media all and (max-width: 943px) {
+  /* One-column project list */
+  .project-card {
+    align-items: center;
+  }
+  #your-project {
+    height: 100%;
   }
 }
 @media all and (max-width: 750px) {
@@ -521,16 +511,5 @@ main p {
   }
   .portrait-wrapper {
     padding: 0 3rem;
-  }
-  .project-list {
-    grid-gap: 0.5rem;
-    grid-template-columns: 1fr;
-    margin: 0 0.5rem;
-  }
-  .project-card-header {
-    flex-direction: column;
-  }
-  .project-links {
-    margin: 0 auto;
   }
 }
