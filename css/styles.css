@@ -233,6 +233,7 @@ main p {
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  margin-top: 4rem;
   text-shadow: 1px 1px 0 var(--primary-color), -1px 1px 0 var(--primary-color),
     -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color);
 }
