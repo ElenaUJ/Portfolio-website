@@ -208,6 +208,7 @@ main p {
   animation: 1.2s slideIn ease-out;
   font-size: 7vw;
   font-weight: 700;
+  text-align: center;
 }
 
 /* About page styles */
@@ -305,7 +306,7 @@ main p {
 .project-list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   margin: 0;
 }
 #your-project {
@@ -384,6 +385,10 @@ main p {
   /* One-column project list */
   .project-card {
     align-items: center;
+    width: 100%;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
   }
   #your-project {
     height: 100%;
