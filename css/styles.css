@@ -23,6 +23,11 @@
 }
 
 /* Animations */
+@keyframes shine {
+  100% {
+    transform: rotateZ(60deg) translate(1rem, -9rem);
+  }
+}
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -67,6 +72,9 @@ body {
   min-height: 100vh;
   padding: 0;
 }
+button:hover {
+  cursor: pointer;
+}
 h1 {
   animation: 1.2s slideIn ease-out;
   color: var(--primary-color);
@@ -77,6 +85,30 @@ h1 {
 }
 h2 {
   font-size: 1.2rem;
+}
+
+/* Component styles */
+.shine {
+  overflow: hidden;
+  position: relative;
+}
+.shine:after {
+  background: linear-gradient(
+    to bottom,
+    rgba(229, 172, 142, 0),
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(229, 172, 142, 0)
+  );
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  transform: rotateZ(60deg) translate(-5rem, 7.5rem);
+}
+.shine:hover::after {
+  animation: shine 1s forwards;
 }
 
 /* Header styles */
@@ -260,7 +292,6 @@ main p {
   border: none;
   border-radius: 0.5rem;
   color: var(--background-color);
-  cursor: pointer;
   margin-top: 1.6rem;
   padding: 0;
   width: fit-content;
@@ -355,11 +386,6 @@ main p {
   padding: 0.4rem 1.2rem;
   text-decoration: none;
   transition: var(--transition-transform);
-}
-.submit-button:hover,
-.submit-button:focus {
-  cursor: pointer;
-  transform: var(--transform-scale);
 }
 .submit-button:active {
   background-color: var(--primary-color-light);
