@@ -162,6 +162,11 @@ header a {
 }
 
 /* Footer styles */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 2rem;
+}
 footer a {
   transition: var(--transition-transform);
 }
@@ -169,34 +174,32 @@ footer a:hover,
 footer a:focus {
   transform: var(--transform-scale);
 }
-.page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 2rem;
-  text-align: center;
-}
 .social-media-icon {
-  filter: invert(10%) sepia(28%) saturate(1717%) hue-rotate(193deg)
-    brightness(101%) contrast(90%);
+  filter: invert(14%) sepia(7%) saturate(13%) hue-rotate(86deg) brightness(105%)
+    contrast(85%);
+  padding: 0.3rem;
   text-decoration: none;
 }
+.social-media-icon img {
+  height: 2.4rem;
+  width: auto;
+}
+#email-icon,
 #github-icon,
-#twitter-icon,
 #linkedin-icon {
   transition: var(--transition-transform), var(--transition-filter);
+}
+#email-icon:hover,
+#email-icon:focus {
+  scale: var(--transform-scale);
+  filter: invert(59%) sepia(7%) saturate(1979%) hue-rotate(34deg)
+    brightness(97%) contrast(86%);
 }
 #github-icon:hover,
 #github-icon:focus {
   scale: var(--transform-scale);
   filter: invert(35%) sepia(21%) saturate(1113%) hue-rotate(222deg)
     brightness(96%) contrast(90%);
-}
-#twitter-icon:hover,
-#twitter-icon:focus {
-  scale: var(--transform-scale);
-  filter: invert(68%) sepia(81%) saturate(4703%) hue-rotate(176deg)
-    brightness(100%) contrast(90%);
 }
 #linkedin-icon:hover,
 #linkedin-icon:focus {
