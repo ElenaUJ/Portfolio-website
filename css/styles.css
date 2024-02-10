@@ -113,8 +113,12 @@ h2 {
 
 /* Header styles */
 header {
+  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
 }
 header a {
   text-decoration: none;
@@ -211,7 +215,7 @@ footer a:focus {
 /* Main content styles */
 main {
   margin: 4rem;
-  margin-top: 0;
+  margin-top: 3rem;
 }
 main a {
   transition: 0.2s color linear;
@@ -514,7 +518,7 @@ main p {
   /* Other media queries */
   main {
     margin: 2rem;
-    margin-top: 0;
+    margin-top: 3rem;
   }
   .about-wrapper {
     flex-direction: column-reverse;
