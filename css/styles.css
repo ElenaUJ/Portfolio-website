@@ -38,7 +38,7 @@
   }
   70% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(0%);f
   }
   100% {
     opacity: 1;
@@ -119,6 +119,16 @@ header {
   position: fixed;
   width: 100vw;
   z-index: 9999;
+}
+header::after {
+  background: inherit;
+  bottom: -0.5rem;
+  content: '';
+  height: 4rem;
+  filter: blur(0.2rem);
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 header a {
   text-decoration: none;
