@@ -353,12 +353,11 @@ main p {
 .project-list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 3fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   margin: 0;
 }
 #your-project {
   background-color: var(--accent-color);
-  height: 50%;
 }
 
 /* Contact page styles */
@@ -421,19 +420,6 @@ main p {
 @media all and (min-width: 751px) and (max-width: 833px) {
   .bubble {
     height: 8rem;
-  }
-}
-@media all and (max-width: 943px) {
-  /* One-column project list */
-  .project-card {
-    align-items: center;
-    width: 100%;
-  }
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-  #your-project {
-    height: 100%;
   }
 }
 @media all and (max-width: 750px) {
