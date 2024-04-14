@@ -435,6 +435,31 @@ main p {
     height: 5.5rem;
   }
 }
+@media all and (min-width: 1216px) {
+  .project-button {
+    font-size: 1vw;
+  }
+  .project-card-details {
+    font-size: 1vw;
+    line-height: 1rem;
+    padding: 1.5vw;
+  }
+  .project-card-title {
+    font-size: 1.1vw;
+  }
+}
+@media all and (min-width: 848px) and (max-width: 1215px) {
+  .project-button {
+    font-size: 1.3vw;
+  }
+  .project-card-details {
+    font-size: 1.3vw;
+    padding: 2vw;
+  }
+  .project-card-title {
+    font-size: 1.7vw;
+  }
+}
 @media all and (min-width: 834px) and (max-width: 968px) {
   .bubble {
     height: 7rem;
